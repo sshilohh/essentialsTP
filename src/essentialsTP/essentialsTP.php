@@ -204,7 +204,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
             $text    = $tile->getText();
 
             if(strtolower($text[0]) === "[warp]"){
-                if (!$player->hasPermission("essentialstp.command.sign.warp")) {
+                if (!$player->hasPermission("tp.command.sign.warp")) {
                     $player->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     $event->setCancelled(true);
                     return true;
@@ -248,7 +248,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 }
 
             }elseif((strtolower($text[0]) === "[wild]")){
-                if (!$player->hasPermission("essentialstp.command.sign.wild")) {
+                if (!$player->hasPermission("tp.command.sign.wild")) {
                     $player->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     $event->setCancelled(true);
                     return true;
@@ -279,7 +279,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                     }
                 }
             }elseif(strtolower($text[0]) === "[spawn]"){
-                if (!$player->hasPermission("essentialstp.command.sign.spawn")) {
+                if (!$player->hasPermission("tp.command.sign.spawn")) {
                     $player->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     $event->setCancelled(true);
                     return true;
@@ -341,7 +341,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
             $text = $tile_above->getText();
 
             if(strtolower($text[0]) === "[warp]"){
-                if (!$player->hasPermission("essentialstp.command.sign.warp.break")) {
+                if (!$player->hasPermission("tp.command.sign.warp.break")) {
                     $player->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     $event->setCancelled(true);
                     return true;
@@ -349,7 +349,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                     return true;
                 }
             }elseif (strtolower($text[0]) === "[wild]"){
-                if (!$player->hasPermission("essentialstp.command.sign.wild.break")) {
+                if (!$player->hasPermission("tp.command.sign.wild.break")) {
                     $player->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     $event->setCancelled(true);
                     return true;
@@ -357,7 +357,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                     return true;
                 }
             }elseif (strtolower($text[0]) === "[spawn]"){
-                if (!$player->hasPermission("essentialstp.command.sign.spawn.break")) {
+                if (!$player->hasPermission("tp.command.sign.spawn.break")) {
                     $player->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     $event->setCancelled(true);
                     return true;
@@ -373,7 +373,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 $text = $tile->getText();
 
                 if (strtolower($text[0]) === "[warp]") {
-                    if (!$player->hasPermission("essentialstp.command.sign.warp.break")) {
+                    if (!$player->hasPermission("tp.command.sign.warp.break")) {
                         $player->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                         $event->setCancelled(true);
                         return true;
@@ -389,7 +389,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                         return true;
                     }
                 } elseif (strtolower($text[0]) === "[spawn]") {
-                    if (!$player->hasPermission("essentialstp.command.sign.spawn.break")) {
+                    if (!$player->hasPermission("tp.command.sign.spawn.break")) {
                         $player->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                         $event->setCancelled(true);
                         return true;
@@ -408,7 +408,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
         $player = $event->getPlayer();
 
         if(strtolower($event->getLine(0)) === "[warp]"){
-            if (!$player->hasPermission("essentialstp.command.sign.warp.create")) {
+            if (!$player->hasPermission("tp.command.sign.warp.create")) {
                 $player->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                 $event->setCancelled(true);
                 return true;
@@ -425,7 +425,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 return true;
             }
         }elseif(strtolower($event->getLine(0)) === "[wild]"){
-            if (!$player->hasPermission("essentialstp.command.sign.wild.create")) {
+            if (!$player->hasPermission("tp.command.sign.wild.create")) {
                 $player->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                 $event->setCancelled(true);
                 return true;
@@ -433,7 +433,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 return true;
             }
         }elseif(strtolower($event->getLine(0)) === "[spawn]"){
-            if (!$player->hasPermission("essentialstp.command.sign.spawn.create")) {
+            if (!$player->hasPermission("tp.command.sign.spawn.create")) {
                 $player->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                 $event->setCancelled(true);
                 return true;
@@ -516,7 +516,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
             case 'home':
                 if ($sender instanceof Player)
                 {
-                    if (!$sender->hasPermission("essentialstp.command.home")) {
+                    if (!$sender->hasPermission("tp.command.home")) {
                         $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                         return true;
                     }
@@ -591,7 +591,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
             case 'sethome':
                 if ($sender instanceof Player)
                 {
-                    if (!$sender->hasPermission("essentialstp.command.sethome")) {
+                    if (!$sender->hasPermission("tp.command.sethome")) {
                         $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                         return true;
                     }
@@ -648,7 +648,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
             case 'delhome':
                 if ($sender instanceof Player)
                 {
-                    if (!$sender->hasPermission("essentialstp.command.delhome")) {
+                    if (!$sender->hasPermission("tp.command.delhome")) {
                         $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                         return true;
                     }
@@ -689,7 +689,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 }
                 break;
             case 'tpa':
-                if (!$sender->hasPermission("essentialstp.command.tpa")) {
+                if (!$sender->hasPermission("tp.command.tpa")) {
                     $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     return true;
                 }
@@ -777,7 +777,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 }
                 break;
             case 'tpaccept':
-                if (!$sender->hasPermission("essentialstp.command.tpaccept")) {
+                if (!$sender->hasPermission("tp.command.tpaccept")) {
                     $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     return true;
                 }
@@ -844,7 +844,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 }
                 break;
             case 'tpdeny':
-                if (!$sender->hasPermission("essentialstp.command.tpdeny")) {
+                if (!$sender->hasPermission("tp.command.tpdeny")) {
                     $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     return true;
                 }
@@ -863,7 +863,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 }
                 break;
             case 'warp':
-                if (!$sender->hasPermission("essentialstp.command.warp")) {
+                if (!$sender->hasPermission("tp.command.warp")) {
                     $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     return true;
                 }
@@ -934,13 +934,13 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 }
                 break;
             case 'setwarp':
-                if (!$sender->hasPermission("essentialstp.command.setwarp")) {
+                if (!$sender->hasPermission("tp.command.setwarp")) {
                     $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     return true;
                 }
                 if ($sender instanceof Player)
                 {
-                    if (!$sender->hasPermission("essentialstp.command.setwarp")) {
+                    if (!$sender->hasPermission("tp.command.setwarp")) {
                         $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                         return true;
                     }
@@ -994,7 +994,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 }
                 break;
             case 'delwarp':
-                if (!$sender->hasPermission("essentialstp.command.delwarp")) {
+                if (!$sender->hasPermission("tp.command.delwarp")) {
                     $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     return true;
                 }
@@ -1035,7 +1035,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 }
                 break;
             case 'wild':
-                if (!$sender->hasPermission("essentialstp.command.wild")) {
+                if (!$sender->hasPermission("tp.command.wild")) {
                     $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     return true;
                 }
@@ -1080,7 +1080,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 }
                 break;
             case 'back':
-                if (!$sender->hasPermission("essentialstp.command.back")) {
+                if (!$sender->hasPermission("tp.command.back")) {
                     $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     return true;
                 }
@@ -1103,7 +1103,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
                 }
                 break;
             case 'spawn':
-                if (!$sender->hasPermission("essentialstp.command.spawn")) {
+                if (!$sender->hasPermission("tp.command.spawn")) {
                     $sender->sendMessage(TextFormat::RED . $this->config->get("Lang_no_permissions"));
                     return true;
                 }
@@ -1344,7 +1344,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
     }
 
     public function onEnable(){
-        $this->getLogger()->info(TextFormat::GREEN."essentialsTP+ loading...");
+        $this->getLogger()->info(TextFormat::GREEN."essentialsTPS loading...");
         @mkdir($this->getDataFolder());
         $this->check_config();
         try{
@@ -1364,7 +1364,7 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
         $this->getLogger()->info(TextFormat::GREEN."[INFO] loading [".TextFormat::GOLD."config.yml".TextFormat::GREEN."]....");
         $this->tpa_cooldown = time() - $this->config->get("tpa-here-cooldown");
         $this->getLogger()->info(TextFormat::GREEN."[INFO] loading [".TextFormat::GOLD."config.yml".TextFormat::GREEN."] DONE");
-        $this->getLogger()->info(TextFormat::GREEN."essentialsTP+ loaded!");
+        $this->getLogger()->info(TextFormat::GREEN."EssentialsTPS Loaded");
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
@@ -1372,6 +1372,6 @@ class essentialsTP extends PluginBase  implements CommandExecutor, Listener {
         if($this->prepare){
             $this->prepare->close();
         }
-        $this->getLogger()->info("essentialsTP+ Disabled");
+        $this->getLogger()->info("EssentialsTPS Disabled");
     }
 }
